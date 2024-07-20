@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Daily Joke Email Subscription</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-top: 50px;
+    background-color: #f0f0f0;
+  }
+  .container {
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  .form-group {
+    margin-bottom: 15px;
+  }
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  .form-group input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  .form-group button {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  .form-group button:hover {
+    background-color: #0056b3;
+  }
+</style>
+</head>
+<body>
+  <h1>Daily Joke Email Subscription</h1>
+  <div class="container">
+    <form id="emailForm">
+      <div class="form-group">
+        <label for="email">Enter your email:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <button type="submit">Subscribe</button>
+      </div>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById('emailForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+      
+      // Get user's email
+      const email = document.getElementById('email').value;
+
+      // Mock API call to send joke to email (replace with actual implementation)
+      sendJokeByEmail(email);
+    });
+
+    function sendJokeByEmail(email) {
+      // Simulate API call to send email (replace with actual API integration)
+      setTimeout(function() {
+        alert(`Jenish has made fool to ${email}! Check your email nothing will happen hahahaha hahahaha.`);
+        // Clear form after submission
+        document.getElementById('emailForm').reset();
+      }, 2000); // Simulate 2 seconds delay
+    }
+  </script>
+</body>
+</html>
